@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dr. Simohammed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeInDown 2s ease forwards;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeInUp 2s ease forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating balloons */
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.7);
+      animation: rise 10s linear infinite;
+    }
+    .balloon::after {
+      content: "";
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      width: 2px;
+      height: 40px;
+      background: white;
+    }
+    @keyframes rise {
+      from { transform: translateY(0); }
+      to { transform: translateY(-120vh); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday 🎉</h1>
+  <p>To the amazing <strong>Dr.Si Mohammed Benamar</strong></p>
+
+  <!-- Balloons -->
+  <div class="balloon" style="left:20%; animation-delay:0s;"></div>
+  <div class="balloon" style="left:50%; animation-delay:2s;"></div>
+  <div class="balloon" style="left:80%; animation-delay:4s;"></div>
+</body>
+</html>
